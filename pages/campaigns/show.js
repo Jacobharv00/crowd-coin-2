@@ -9,7 +9,6 @@ import { Link } from "../../routes";
 
 class CampaignShow extends Component {
     static async getInitialProps(props) {
-        console.log("props -->", props);
         const campaign = props.query.address
             ? await Campaign(props.query.address)
             : null;
@@ -33,8 +32,6 @@ class CampaignShow extends Component {
             requestsCount,
             approversCount,
         } = this.props;
-
-        console.log("balance", balance);
 
         const items = [
             {
